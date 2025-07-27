@@ -1,0 +1,41 @@
+1. Create a solution
+dotnet --info
+dotnet new list
+
+dotnet new sln
+
+2. Create webapi
+# Create a service
+dotnet new webapi -o src/AuctionService -controllers (for .net > 8.0 add -controllers)
+
+# Add sln to the service
+dotnet sln add src/AuctionService
+
+
+3. Entity Framework
+# Check if install it or not
+dotnet tool list -g
+
+# Install
+dotnet tool install dotnet-ef -g
+
+# Create migration
+dotnet ef migrations add "IntialCreate" -o Data/migrations
+
+# Update database (run after create DB in the database)
+dotnet ef database update
+
+# Drop db
+dotnet ef database drop   
+
+
+4. Docker
+# In the top folder create docker-compose.yml then run -d in detached mode (to not see the logs inside the terminal):
+docker compose up -d
+
+5. Git
+git init
+
+# Create gitignore for a git project
+dotnet new gitignore 
+
