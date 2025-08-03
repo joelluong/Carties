@@ -1,3 +1,4 @@
+I. Start Commands
 1. Create a solution
 dotnet --info
 dotnet new list
@@ -38,4 +39,15 @@ git init
 
 # Create gitignore for a git project
 dotnet new gitignore 
+
+II. Packages
+1. AuctionService
+AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1
+Microsoft.EntityFrameworkCore.Design/9.0.7
+Npgsql.EntityFrameworkCore.PostgreSQL/9.0.4
+
+2. SearchService
+MongoDB.Entities/24.1.1
+AutoMapper/15.0.1
+Note: Automapper 13+ includes the Dependency Injection extensions with the main package so just add Automapper here, not Dependency injection version
 
